@@ -1,3 +1,5 @@
+package com.example.coverflow;
+
 /*
  * Copyright (C) 2010 Neil Davies
  *
