@@ -18,7 +18,7 @@
  * 
  * @author Neil Davies
  */
-package com.example.coverflow;
+
 
 
 import android.content.Context;
