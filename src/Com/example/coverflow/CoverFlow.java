@@ -53,6 +53,8 @@ public class CoverFlow extends Gallery {
 	 */
 	private int mCoveflowCenter;
 
+	private float mZAxis = 100.0f;
+
 	public CoverFlow(Context context) {
 		super(context);
 		this.setStaticTransformationsEnabled(true);
@@ -104,6 +106,14 @@ public class CoverFlow extends Gallery {
 	 */
 	public void setMaxZoom(int maxZoom) {
 		mMaxZoom = maxZoom;
+	}
+
+	public float getmZAxis() {
+		return mZAxis;
+	}
+
+	public void setmZAxis(float mZAxis) {
+		this.mZAxis = mZAxis;
 	}
 
 	/**
@@ -192,7 +202,7 @@ public class CoverFlow extends Gallery {
 		final int imageWidth = child.getLayoutParams().width;
 		final int rotation = Math.abs(rotationAngle);
 
-		mCamera.translate(0.0f, 0.0f, 100.0f);
+		mCamera.translate(0.0f, 0.0f, mZAxis);
 
 		// As the angle of the view gets less, zoom in
 		if (rotation < mMaxRotationAngle) {
